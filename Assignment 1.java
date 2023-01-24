@@ -142,3 +142,23 @@ public class ObjectDemo{
             System.out.println("dept.Name = " + department.DepartmentName);
             System.out.println("dept.ID = " + department.DepartmentID);
         }
+        // Cau 10: each: In ra thông tin các account bao gồm: Email, FullName và tên phòng ban của họ
+
+        Account[] accounts1 = {Account_1, Account_2,Account_3};
+
+        for (int i = 0; i < accounts1.length; i++) {
+            System.out.println("Thông tin account thứ " + (i + 1) + " là:");
+            System.out.println("Email: " + accounts1[i].Email);
+            System.out.println("Full name: " + accounts1[i].fullName);
+            System.out.println("Phòng ban: " + accounts1[i].Department);
+            System.out.println();
+        }
+    //Question 15:In ra các số chẵn nhỏ hơn hoặc bằng 20
+
+        for (int i = 0; i <= 20; i = i + 2) {
+            System.out.println(i);
+            
+          }
+    } //dong ngoac ham main
+
+}//dong ngoac class
