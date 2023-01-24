@@ -1,2 +1,2 @@
-# SQL2022
+# BrSE2210 JAVA
 My new journey of learning
