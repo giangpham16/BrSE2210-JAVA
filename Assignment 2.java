@@ -1,4 +1,8 @@
-EX1
+//EX1
+// Question 1:
+//Kiểm tra account thứ 2
+//Nếu không có phòng ban (tức là department == null) thì sẽ in ra text "Nhân viên này chưa có phòng ban"
+//Nếu không thì sẽ in ra text "Phòng ban của nhân viên này là ..."
 
 public class Exercise01 {
     public static void question01() {
@@ -9,6 +13,13 @@ public class Exercise01 {
             System.out.println("Phòng ban của nhân viên này là ...");
         }
     }
+
+// Question 2:
+//Kiểm tra account thứ 2
+//Nếu không có group thì sẽ in ra text "Nhân viên này chưa có group"
+//Nếu có mặt trong 1 hoặc 2 group thì sẽ in ra text "Group của nhân viên này là Java Fresher, C# Fresher"
+//Nếu có mặt trong 3 Group thì sẽ in ra text "Nhân viên này là người quan trọng, tham gia nhiều group"
+//Nếu có mặt trong 4 group trở lên thì sẽ in ra text "Nhân viên này là người hóng chuyện, tham gia tất cả các group"
 
     public static void question02() {
         Account account = new Account();
@@ -23,6 +34,8 @@ public class Exercise01 {
         }
     }
 
+//Question 3: Sử dụng toán tử ternary để làm Question 1 
+    
     public static void question03() {
         Account account = new Account();
         String message = (account.department == null)
@@ -30,7 +43,13 @@ public class Exercise01 {
                 : "Phòng ban của nhân viên này là ...";
         System.out.println(message);
     }
-
+    
+//Question 4:
+//Sử dụng toán tử ternary để làm yêu cầu sau:
+//Kiểm tra Position của account thứ 1
+//Nếu Position = Dev thì in ra text "Đây là Developer"
+//Nếu không phải thì in ra text "Người này không phải là Developer"
+    
     public static void question04() {
         Account account = new Account();
         Position position = new Position();
@@ -41,6 +60,12 @@ public class Exercise01 {
                 : "Người này không phải là Developer";
         System.out.println(message);
     }
+    
+//SWITCH CASE Question 5:
+//Lấy ra số lượng account trong nhóm thứ 1 và in ra theo format sau: Nếu số lượng account = 1 thì in ra "Nhóm có một thành viên" 
+//Nếu số lượng account = 2 thì in ra "Nhóm có hai thành viên" 
+//Nếu số lượng account = 3 thì in ra "Nhóm có ba thành viên" 
+//Còn lại in ra "Nhóm có nhiều thành viên"
 
     public static void question05() {
         Group group = new Group();
@@ -60,7 +85,9 @@ public class Exercise01 {
                 break;
         }
     }
-
+    
+//Question 6:Sử dụng switch case để làm lại Question 2
+    
     public static void question06() {
         Account account = new Account();
         account.groups = new Group[]{new Group()};
@@ -81,7 +108,9 @@ public class Exercise01 {
                 break;
         }
     }
-
+    
+//Question 7:Sử dụng switch case để làm lại Question 3
+    
     public static void question07() {
         Account account = new Account();
         Position position = new Position();
@@ -97,7 +126,9 @@ public class Exercise01 {
                 break;
         }
     }
-
+    
+//FOREACH Question 8:In ra thông tin các account bao gồm: Email, FullName và tên phòng ban của họ
+    
     public static void question08() {
         Department department = new Department();
         department.name = "Kỹ thuật";
@@ -116,6 +147,8 @@ public class Exercise01 {
         }
     }
 
+    //Question 9:In ra thông tin các phòng ban bao gồm: id và name
+    
     public static void question09() {
         Department department = new Department();
         department.id = 1;
@@ -128,7 +161,14 @@ public class Exercise01 {
             System.out.println("dep.name = " + dep.name);
         }
     }
-
+    
+//FOR
+//Question 10:In ra thông tin các account bao gồm: Email, FullName và tên phòng ban của họ theo định dạng như sau:
+//Thông tin account thứ 1 là: Email: NguyenVanA@gmail.com Full name: Nguyễn Văn A
+//Phòng ban: Sale
+//Thông tin account thứ 2 là: Email: NguyenVanB@gmail.com Full name: Nguyễn Văn B
+//Phòng ban: Marketting
+    
     public static void question10() {
         Department department = new Department();
         department.name = "Kỹ thuật";
@@ -149,6 +189,12 @@ public class Exercise01 {
         }
     }
 
+//Question 11:In ra thông tin các phòng ban bao gồm: id và name theo định dạng sau:
+//Thông tin department thứ 1 là: Id: 1
+//Name: Sale
+//Thông tin department thứ 2 là: Id: 2
+//Name: Marketing
+    
     public static void question11() {
         Department department = new Department();
         department.id = 1;
@@ -163,7 +209,9 @@ public class Exercise01 {
             System.out.println();
         }
     }
-
+    
+//Question 12:Chỉ in ra thông tin 2 department đầu tiên theo định dạng như Question 10
+    
     public static void question12() {
         Department department = new Department();
         department.id = 1;
@@ -178,7 +226,9 @@ public class Exercise01 {
             System.out.println();
         }
     }
-
+    
+//Question 13:In ra thông tin tất cả các account ngoại trừ account thứ 2
+    
     public static void question13() {
         Department department = new Department();
         department.name = "Kỹ thuật";
@@ -200,7 +250,9 @@ public class Exercise01 {
             }
         }
     }
-
+    
+//Question 14:In ra thông tin tất cả các account có id < 4
+    
     public static void question14() {
         Department department = new Department();
         department.name = "Kỹ thuật";
@@ -223,6 +275,8 @@ public class Exercise01 {
         }
     }
 
+    //Question 15:In ra các số chẵn nhỏ hơn hoặc bằng 20
+    
     public static void question15() {
         for (int i = 0; i <= 20; i = i + 2) {
             System.out.println(i);
